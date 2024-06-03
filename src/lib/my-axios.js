@@ -10,7 +10,7 @@ MyAxios.interceptors.response.use(
 		if (response.data.error_code === 404) return Promise.reject(new NotFoundError(message));
 		if (response.data.error_code === 404) return Promise.reject(new NotFoundError(message));
 		if (response.data.error_code === 500) return Promise.reject(new InternalServerError(message));
-		if (response.data.error_code === 0) return response;
+		if (response.data.error_code === 0 || response.data.error_code === 200) return response;
 
 		let error = new Error();
 		error.name = "Network error";

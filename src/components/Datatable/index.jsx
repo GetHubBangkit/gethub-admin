@@ -143,6 +143,7 @@ export default function Datatable({
 										{column.label}
 										{!column?.disableSort && renderSortBy(column)}
 									</span>
+									{column?.enableFilter && renderFilter(column)}
 								</Table.TH>
 							))}
 						</Table.TR>

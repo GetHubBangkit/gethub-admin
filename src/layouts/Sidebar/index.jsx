@@ -49,6 +49,18 @@ export default function Sidebar({ expanded, active }) {
 					href="/information"
 					active={active === "/information"}
 				/>
+				<Navlink
+					title="Proyek"
+					icon={<Icon icon="Briefcase" className="h-4 w-4" />}
+					href="/project"
+					active={active === "/project"}
+				/>
+				<Navlink
+					title="User"
+					icon={<Icon icon="Users" className="h-4 w-4" />}
+					href="/user"
+					active={active === "/user"}
+				/>
 				{/* <Navlink
 					title="Master Data"
 					icon={<Icon icon="Grid" className="h-4 w-4" />}
