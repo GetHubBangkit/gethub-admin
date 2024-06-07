@@ -26,18 +26,12 @@ export default function Home() {
 		},
 	});
 
-	const { data: chart, isLoading: isChartLoading } = useDashboard({
-		args: Boolean(user),
-		params: {
-			mode: "chart",
-		},
-	});
 
 	useEffect(() => {
 		setIsClient(true);
 	}, []);
 
-	const pageData = [isChartLoading];
+	const pageData = [isDashboardLoading];
 	if (isUserLoading || !isClient || pageData.some((data) => data == null)) return <PageLoader />;
 	return (
 		<Layout title="Dashboard" breadcrumbs={["Dashboard"]} active="/">
@@ -120,13 +114,13 @@ export default function Home() {
 					<Card.Body className="h-96">
 						<AreaChart
 							labels={
-								isChartLoading === false && Array.isArray(chart.chart)
-									? chart.chart.map((item) => item.name)
+								isDashboardLoading === false && Array.isArray(dashboard.chart)
+									? dashboard.chart.map((item) => item.name)
 									: []
 							}
 							data={
-								isChartLoading === false && Array.isArray(chart.chart)
-									? chart.chart.map((item) => item.total)
+								isDashboardLoading === false && Array.isArray(dashboard.chart)
+									? dashboard.chart.map((item) => item.total)
 									: []
 							}
 						/>
