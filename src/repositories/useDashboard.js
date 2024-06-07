@@ -1,5 +1,5 @@
 import useSWR from "swr";
 
 export default function useDashboard({ params = {}, args = true } = {}) {
-	return useSWR(args && ["http://127.0.0.1:8100/dashboard", params]);
+	return useSWR(args && ["https://machinelearning-api-kot54pmj3q-et.a.run.app/dashboard", params]);
 }
