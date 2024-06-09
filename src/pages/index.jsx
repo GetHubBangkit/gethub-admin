@@ -67,7 +67,7 @@ export default function Home() {
 									Total Sponsor
 								</p>
 								<span className="text-lg font-bold text-neutral-900">
-									{isDashboardLoading ? <Skeleton height={10} /> : dashboard?.total_user}
+									{isDashboardLoading ? <Skeleton height={10} /> : dashboard?.total_sponsor}
 								</span>
 							</div>
 						</div>
