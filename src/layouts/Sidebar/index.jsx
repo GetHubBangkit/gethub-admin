@@ -56,25 +56,17 @@ export default function Sidebar({ expanded, active }) {
 					active={active === "/project"}
 				/>
 				<Navlink
+					title="Settlement"
+					icon={<Icon icon="Inbox" className="h-4 w-4" />}
+					href="/settlement"
+					active={active === "/settlement"}
+				/>
+				<Navlink
 					title="User"
 					icon={<Icon icon="Users" className="h-4 w-4" />}
 					href="/user"
 					active={active === "/user"}
 				/>
-				{/* <Navlink
-					title="Master Data"
-					icon={<Icon icon="Grid" className="h-4 w-4" />}
-					href="#master-data"
-					onClick={() => toggleActiveMenu("#master-data")}
-					items={[
-						{
-							menu_label: "Unit",
-							menu_icon_url: "HardDrive",
-							menu_url: "/unit",
-						},
-					]}
-					active={activeMenus.includes("#master-data")}
-				/> */}
 			</div>
 		</aside>
 	);
