@@ -38,6 +38,12 @@ export default function Sidebar({ expanded, active }) {
 					active={active === "/enumeration"}
 				/>
 				<Navlink
+					title="Kategori"
+					icon={<Icon icon="Box" className="h-4 w-4" />}
+					href="/category"
+					active={active === "/category"}
+				/>
+				<Navlink
 					title="Sponsor"
 					icon={<Icon icon="Database" className="h-4 w-4" />}
 					href="/sponsor"
